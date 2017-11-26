@@ -5,9 +5,9 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @ingredient = Ingredient.new(ingredient_params)
-    if @ingredient.save
-      redirect_to @ingredient
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
+      redirect_to @recipes
     else
       render 'new'
     end
