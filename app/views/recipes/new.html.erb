@@ -2,6 +2,8 @@
 <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.fields_for :ingredients, @recipe.ingredients.build do |ingredient_attributes|%>
+  <%end%>
 </p>
   <%= f.submit %>
 <% end %>
